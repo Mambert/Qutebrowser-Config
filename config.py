@@ -140,11 +140,11 @@ config.set('content.javascript.enabled', True, 'qute://*/*')
 
 # Custom controls
 
-c.aliases = {
-            "xb": "config-cycle statusbar.hide",
-            "xt": "config-cycle tabs.show always switching",
-            "xx": "config-cycle statusbar.hide ;; config-cycle tabs.show always switching",
-}
+
+config.bind('xb', 'config-cycle statusbar.show always never')
+config.bind('xt', 'config-cycle tabs.show always switching')
+config.bind('xx', 'config-cycle statusbar.show always never ;; config-cycle tabs.show always switching')
+
 #Big Thanks to Linuus for the Nord theming! https://github.com/Linuus/nord-qutebrowser/blob/master/nord-qutebrowser.py
 nord = {
     # Polar Night
